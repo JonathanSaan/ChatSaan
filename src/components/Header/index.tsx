@@ -5,9 +5,9 @@ export const Header = () => {
   return (
     <header>
       <nav>
-        <a href="https://github.com/JonathanSaan?tab=repositories">JonathanSaan</a>
+        <a href="https://github.com/JonathanSaan">JonathanSaan</a>
         <button>
-          into to google
+          Sign in with Google
         </button>
       </nav>
     </header>

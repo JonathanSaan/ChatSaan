@@ -1,14 +1,12 @@
-import React, { useEffect } from "react";
-import { Header } from "./components/Header";
+import { Container } from "./components/Container";
+//import { Loading } from "./components/Loading";
 
 export const App = () => {
   
+      //<Loading />
   return (
     <>
-      <Header />
-      <div className="Container">
-        <h2>Opa </h2>
-      </div>
+      <Container />
     </>
   );
 };

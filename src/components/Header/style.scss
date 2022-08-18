@@ -15,8 +15,10 @@ header {
     height: 3em;
     
     a {
+      text-decoration: none;
       color: #000;
-      font-size: .8em;
+      font-size: 1em;
+      font-weight: 600;
     }
   }
 }
