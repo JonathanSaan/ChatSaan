@@ -7,9 +7,32 @@ export const Container = () => {
     <>
       <Header />
       <div className="Container">
-        <div className="UserChat">Opa </div>
-        <div className="OtherChat">oi </div>
-        <input />
+        <div className="UserChat">
+          <p>
+            Opa 
+          </p>
+        </div>
+        <div className="OtherChat">
+          <p>
+            oi
+          </p>
+        </div>
+        <div className="OtherChat">
+          <p>
+            oi
+          </p>
+        </div>
+        <div className="UserChat">
+          <p>
+            Opa 
+          </p>
+        </div>
+        <div className="Chat">
+          <input placeholder="Sign in to chat" />
+          <button>
+          botao
+          </button>
+        </div>
       </div>
     </>
   );
