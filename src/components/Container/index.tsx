@@ -1,39 +1,39 @@
 import { Header } from "../../components/Header";
-import "./style.scss";
+import { Home, UserChat, OtherChat, Chat } from "./styles";
 
 export const Container = () => {
   
   return (
     <>
       <Header />
-      <div className="Container">
-        <div className="UserChat">
+      <Home>
+        <UserChat>
           <p>
             Opa 
           </p>
-        </div>
-        <div className="OtherChat">
+        </UserChat>
+        <OtherChat>
           <p>
             oi
           </p>
-        </div>
-        <div className="OtherChat">
+        </OtherChat>
+        <OtherChat>
           <p>
             oi
           </p>
-        </div>
-        <div className="UserChat">
+        </OtherChat>
+        <UserChat>
           <p>
             Opa 
           </p>
-        </div>
-        <div className="Chat">
+        </UserChat>
+        <Chat>
           <input placeholder="Sign in to chat" />
           <button>
-          botao
+            botao
           </button>
-        </div>
-      </div>
+        </Chat>
+      </Home>
     </>
   );
 };

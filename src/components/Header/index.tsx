@@ -1,15 +1,16 @@
-import "./style.scss";
+import { Nav } from "./styles";
+
 
 export const Header = () => {
   
   return (
     <header>
-      <nav>
+      <Nav>
         <a href="https://github.com/JonathanSaan">JonathanSaan</a>
         <button>
           Sign in with Google
         </button>
-      </nav>
+      </Nav>
     </header>
   );
 };
