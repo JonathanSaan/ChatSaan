@@ -1,5 +1,6 @@
 import { Nav } from "./styles";
 
+import { AiOutlineGoogle } from "react-icons/ai";
 
 export const Header = () => {
   
@@ -8,7 +9,10 @@ export const Header = () => {
       <Nav>
         <a href="https://github.com/JonathanSaan">JonathanSaan</a>
         <button>
-          Sign in with Google
+          <span>
+            <AiOutlineGoogle size={20} /> 
+            Sign in with Google
+          </span>
         </button>
       </Nav>
     </header>

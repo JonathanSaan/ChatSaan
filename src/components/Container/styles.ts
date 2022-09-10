@@ -31,6 +31,7 @@ export const Chat = styled.div`
   align-items: center;
   justify-content: space-between;
   background-color: #1D1F2B;
+  border-top: 1px solid #000;
   padding: 0 1em;
   height: 5em;
   width: 100%;
@@ -48,11 +49,14 @@ export const Chat = styled.div`
     outline: none;
     
     @media(max-width: 768px) {
-      width: 70vw;
+      width: 73vw;
     }
   }
   
   button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border: none;
     padding: 1em;
     height: 3em;
@@ -61,12 +65,12 @@ export const Chat = styled.div`
     border-radius: 10px;
   }
   
-  button:hover {
-    background-color: #3B4797;
+  button:active {
+    transform: scale(0.98);
+    filter: Brightness(0.8);
   }
   
   @media(max-width: 768px) {
     height: 4em;
   }
-  
 `;
