@@ -2,8 +2,9 @@ import styled from "styled-components";
 
 export const Home = styled.div`
   background-color: #1D1F2B;
-  padding: 1em 0;
-  min-height: 100vh;
+  padding: 1em 0 0 0;
+  min-height: 15em;
+  height: 100vh;
 `;
 
 export const UserChat = styled.div`
@@ -27,7 +28,10 @@ export const OtherChat = styled.div`
 export const Chat = styled.div`
   display: flex;
   position: fixed;
+  align-items: center;
+  justify-content: space-between;
   background-color: #1D1F2B;
+  padding: 0 1em;
   height: 5em;
   width: 100%;
   left: 0;
@@ -37,15 +41,32 @@ export const Chat = styled.div`
     background-color: #303346;
     color: #FFF;
     padding: 1em;
-    margin: auto 0 auto auto;
     height: 3em;
-    width: 85vw;
+    width: 88vw;
     border: none;
     border-radius: 10px;
     outline: none;
+    
+    @media(max-width: 768px) {
+      width: 70vw;
+    }
   }
   
   button {
-    margin: 0 auto;
+    border: none;
+    padding: 1em;
+    height: 3em;
+    background-color: #6685FD;
+    color: #FFF;
+    border-radius: 10px;
   }
+  
+  button:hover {
+    background-color: #3B4797;
+  }
+  
+  @media(max-width: 768px) {
+    height: 4em;
+  }
+  
 `;

@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const Nav = styled.nav`
-  padding: 0 1em;
   display: flex;
+  padding: 0 1em;
   background-color: #303346;
   justify-content: space-between;
   align-items: center;

@@ -27,13 +27,13 @@ export const Container = () => {
             Opa 
           </p>
         </UserChat>
-        <Chat>
-          <input placeholder="Sign in to chat" />
-          <button>
-            botao
-          </button>
-        </Chat>
       </Home>
+      <Chat>
+        <input placeholder="Sign in to chat" />
+        <button>
+          botao
+        </button>
+      </Chat>
     </>
   );
 };
