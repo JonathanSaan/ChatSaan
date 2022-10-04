@@ -1,41 +1,58 @@
-import { FiSend } from "react-icons/fi";
+import { Header } from "../Header";
+import { Chat } from "../Chat";
+//import { SendMessage } from "../SendMessage";
+import { Home } from "./styles";
 
-import { Header } from "../../components/Header";
-import { Home, UserChat, OtherChat, Chat } from "./styles";
+import { auth } from "../../config/firebase";
+import { useAuthState } from "react-firebase-hooks/auth";
+//import { Home, UserChat, OtherChat, Chat } from "./styles";
 
 export const Container = () => {
+  const [user] = useAuthState(auth);
   
   return (
     <>
       <Header />
       <Home>
-        <UserChat>
-          <p>
-            Opa 
-          </p>
-        </UserChat>
-        <OtherChat>
-          <p>
-            oi
-          </p>
-        </OtherChat>
-        <OtherChat>
-          <p>
-            oi
-          </p>
-        </OtherChat>
-        <UserChat>
-          <p>
-            Opa 
-          </p>
-        </UserChat>
+        <Chat />
       </Home>
-      <Chat>
-        <input placeholder="Sign in to chat" />
-        <button>
-          <FiSend size={20} />
-        </button>
-      </Chat>
     </>
   );
 };
+        //{user ? <Chat /> : null}
+        //<SendMessage />
+
+
+/*
+<OtherChat>
+          <p>
+            oi
+          </p>
+        </OtherChat>
+        <UserChat>
+          <p>
+            Opa 
+          </p>
+        </UserChat>
+        <OtherChat>
+          <p>
+            oi
+          </p>
+        </OtherChat>
+        <OtherChat>
+          <p>
+            oi
+          </p>
+        </OtherChat>
+        <UserChat>
+          <p>
+            Opa 
+          </p>
+        </UserChat>
+        <UserChat>
+          <p>
+            Opa 
+          </p>
+        </UserChat>
+        */
+

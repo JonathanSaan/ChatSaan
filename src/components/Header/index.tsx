@@ -1,19 +1,17 @@
+import { useAuthState } from "react-firebase-hooks/auth";
 import { Nav } from "./styles";
-
-import { AiOutlineGoogle } from "react-icons/ai";
+import { auth } from "../../config/firebase";
+import { SignOut } from "../SignOut";
+import { SignIn } from "../SignIn";
 
 export const Header = () => {
+  const [user] = useAuthState(auth);
   
   return (
     <header>
       <Nav>
         <a href="https://github.com/JonathanSaan">JonathanSaan</a>
-        <button>
-          <span>
-            <AiOutlineGoogle size={20} /> 
-            Sign in with Google
-          </span>
-        </button>
+        {user ? <SignOut /> : <SignIn />}
       </Nav>
     </header>
   );
