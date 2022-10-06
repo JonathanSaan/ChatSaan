@@ -14,12 +14,13 @@ export const SendMessage = () => {
     if (input === "") {
       return null;
     };
-    const {uid, displayName}: any = auth.currentUser;
+    const { uid, displayName, photoURL }: any = auth.currentUser;
     setInput("");
     await addDoc(collection(databaseApp, "messages"), {
       text: input,
       name: displayName,
       uid,
+      photoURL,
       timestamp: serverTimestamp()
     });
   };

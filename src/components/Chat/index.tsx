@@ -3,16 +3,17 @@ import { query, collection, orderBy, onSnapshot } from "firebase/firestore";
 import ScrollableFeed from "react-scrollable-feed";
 import { ChatMessage } from "../ChatMessage";
 import { SendMessage } from "../SendMessage";
-import { databaseApp } from "../../config/firebase";
+import { auth, databaseApp } from "../../config/firebase";
 
 interface Props {
   messages: any;
   setMessages: any;
 }
 
+
 export const Chat = ({ messages, setMessages }: Props) => {
+  const { uid, photoURL }: any = auth.currentUser;
   useEffect(() => {
-      
     const q = query(collection(databaseApp, "messages"), orderBy("timestamp"));
     const unsubscribe = onSnapshot(q, (querySnapshot) => {
       let messages: any = [];
@@ -28,8 +29,8 @@ export const Chat = ({ messages, setMessages }: Props) => {
     <>
       <main>
         <ScrollableFeed>
-          {messages.map((id: number, text: string, photoURL: string, uid: number) => {
-            return <ChatMessage text={text} photoURL={photoURL} uid={uid} />
+          {messages.map((message: any) => {
+            return <ChatMessage key={message.id} text={message.text} photoURL={photoURL} uid={message.uid} />
           })}
         </ScrollableFeed>
       </main>
