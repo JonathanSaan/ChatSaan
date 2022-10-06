@@ -1,16 +1,11 @@
 import styled from "styled-components";
 
 export const Home = styled.div`
-  background-color: #1D1F2B;
-  padding: 5em 0 em 0;
+  padding: 4em 0 0 0;
   min-height: 100vh;
-`;
-
-export const UserChat = styled.div`
-  margin: 0 1em 1em auto;
-  padding: 1em;
-  background-color: #6685FD;
-  color: #FFF;
-  border-radius: 10px 10px 0 10px;
-  max-width: 15em;
+  background-color: #1D1F2B;
+  
+  @media(max-width: 768px) {
+    padding: 4em 0;
+  }
 `;

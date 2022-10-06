@@ -22,7 +22,7 @@ export const Send = styled.form`
     border-radius: 10px;
     outline: none;
     
-    @media(max-width: 768px) {
+    @media(max-width: 568px) {
       width: 73vw;
     }
   }

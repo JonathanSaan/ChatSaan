@@ -1,4 +1,5 @@
-import { OtherChat } from "./styles";
+import { auth } from "../../config/firebase";
+import { OtherPeople, OtherChat, UserPerson, UserChat } from "./styles";
 
 interface Props {
   text: string;
@@ -6,15 +7,34 @@ interface Props {
   photoURL: string;
 }
 
-//export const ChatMessage = (props: message) => {
 export const ChatMessage = ({ text, uid, photoURL }: Props) => {
-  //const { text, uid, photoURL } = props;
-  //const messageClass = uid === auth.currentUser.uid ? 'sent' : 'received';
-  
+  //const messageClass = uid === auth.currentUser.uid ? true : false;
   return (
-    <OtherChat>
-      <img src={photoURL || 'https://api.adorable.io/avatars/23/abott@adorable.png'} />
-      <p>{text}</p>
-    </OtherChat>
+    <>
+      <OtherPeople>
+        <img src={photoURL} alt="User" />
+        <OtherChat>
+          <p>{text}</p>
+        </OtherChat>
+      </OtherPeople>
+    </>
   );
 };
+
+    /*
+      {messageClass ? (
+        <OtherPeople>
+          <img src={photoURL || 'https://api.adorable.io/avatars/23/abott@adorable.png'} alt="User" />
+          <OtherChat>
+            <p>{text}</p>
+          </OtherChat>
+        </OtherPeople>
+      ) : (
+        <UserPerson>
+          <img src={photoURL} alt="User" />
+          <UserChat>
+            <p>{text}</p>
+          </UserChat>
+        </UserPerson>
+      )}
+    */
