@@ -6,7 +6,7 @@ export const SignIn = () => {
   
   const googleSignIn = () => {
     const provider = new GoogleAuthProvider();
-    signInWithRedirect(auth, provider);
+    return signInWithRedirect(auth, provider);
   };
   
   return (

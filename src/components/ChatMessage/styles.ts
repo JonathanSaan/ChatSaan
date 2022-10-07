@@ -60,4 +60,8 @@ export const UserChat = styled.div`
   p {
     word-wrap: break-word;
   }
+  
+  @media(max-width: 768px) {
+    text-align: left;
+  }
 `;
