@@ -3,39 +3,21 @@ import { OtherPeople, Image, OtherChat, UserPerson, UserChat } from "./styles";
 
 interface Props {
   text: string;
-  uid: number;
+  uid: string;
   photoURL: string;
 }
 
+
 export const ChatMessage = ({ text, uid, photoURL }: Props) => {
-  //const messageClass: any = uid === auth.currentUser.uid ? false : true;
-  //console.log(photoURL)
+  let messageClass: boolean = uid === auth.currentUser?.uid ? false: true;
+  
   return (
     <>
-      <OtherPeople>
-        <Image>
-          <img src={photoURL || 'https://api.adorable.io/avatars/23/abott@adorable.png'} alt="User" />
-        </Image>
-        <OtherChat>
-          <p>{text}</p>
-        </OtherChat>
-      </OtherPeople>
-      <UserPerson>
-        <UserChat>
-          <p>ggddhshdhsjdushdhshshhhggffgdhshdhdjasf</p>
-        </UserChat>
-        <Image>
-          <img src={photoURL || 'https://api.adorable.io/avatars/23/abott@adorable.png'} alt="User" />
-        </Image>
-      </UserPerson>
-    </>
-  );
-};
-
-    /*
       {messageClass ? (
         <OtherPeople>
-          <img src={photoURL || 'https://api.adorable.io/avatars/23/abott@adorable.png'} alt="User" />
+          <Image>
+            <img src={photoURL} alt="User" referrerPolicy="no-referrer" />
+          </Image>
           <OtherChat>
             <p>{text}</p>
           </OtherChat>
@@ -45,7 +27,11 @@ export const ChatMessage = ({ text, uid, photoURL }: Props) => {
           <UserChat>
             <p>{text}</p>
           </UserChat>
-          <img src={photoURL || 'https://api.adorable.io/avatars/23/abott@adorable.png'} alt="User" />
+          <Image>
+            <img src={photoURL} alt="User" referrerPolicy="no-referrer" />
+          </Image>
         </UserPerson>
       )}
-    */
+    </>
+  );
+};
