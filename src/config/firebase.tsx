@@ -3,13 +3,13 @@ import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDHXgiq1E7hqzWkN6qd5n_uOkio8u79IMo",
-  authDomain: "chatsaan.firebaseapp.com",
-  projectId: "chatsaan",
-  storageBucket: "chatsaan.appspot.com",
-  messagingSenderId: "323806787928",
-  appId: "1:323806787928:web:b727acb2db83c8eae98d2d",
-  measurementId: "G-08Z6R75F3J"
+  apiKey: `${process.env.NEXT_PUBLIC_Firebase_API_Key}`,
+	authDomain: `${process.env.NEXT_PUBLIC_Auth_Domain}`,
+	projectId: `${process.env.NEXT_PUBLIC_Project_Id}`,
+	storageBucket: `${process.env.NEXT_PUBLIC_Storage_Bucket}`,
+	messagingSenderId: `${process.env.NEXT_PUBLIC_Message_Sender_Id}`,
+	appId: `${process.env.NEXT_PUBLIC_App_Id}`,
+	measurementId: `${process.env.NEXT_PUBLIC_Measurement_Id}`
 };
 
 export const app = initializeApp(firebaseConfig);
