@@ -3,13 +3,13 @@ import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: `${process.env.NEXT_PUBLIC_Firebase_API_Key}`,
-	authDomain: `${process.env.NEXT_PUBLIC_Auth_Domain}`,
-	projectId: `${process.env.NEXT_PUBLIC_Project_Id}`,
-	storageBucket: `${process.env.NEXT_PUBLIC_Storage_Bucket}`,
-	messagingSenderId: `${process.env.NEXT_PUBLIC_Message_Sender_Id}`,
-	appId: `${process.env.NEXT_PUBLIC_App_Id}`,
-	measurementId: `${process.env.NEXT_PUBLIC_Measurement_Id}`
+  apiKey: `${process.env.REACT_APP_Firebase_API_Key}`,
+	authDomain: `${process.env.REACT_APP_Auth_Domain}`,
+	projectId: `${process.env.REACT_APP_Project_Id}`,
+	storageBucket: `${process.env.REACT_APP_Storage_Bucket}`,
+	messagingSenderId: `${process.env.REACT_APP_Message_Sender_Id}`,
+	appId: `${process.env.REACT_APP_App_Id}`,
+	measurementId: `${process.env.REACT_APP_Measurement_Id}`
 };
 
 export const app = initializeApp(firebaseConfig);
