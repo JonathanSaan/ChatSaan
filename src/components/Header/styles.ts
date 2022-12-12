@@ -21,6 +21,7 @@ export const Nav = styled.nav`
     align-items: center;
     display: flex;
     justify-content: space-between;
+    cursor: pointer;
     background-color: #1D1F2B;
     color: #FFF;
     padding: .7em;
