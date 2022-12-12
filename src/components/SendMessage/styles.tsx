@@ -17,21 +17,19 @@ export const Send = styled.form`
     color: #FFF;
     padding: 1em;
     height: 3.5em;
-    width: 88vw;
+    width: 100%;
     border: none;
     border-radius: 10px;
     outline: none;
-    
-    @media(max-width: 568px) {
-      width: 73vw;
-    }
   }
   
   button {
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
     border: none;
+    margin: 0 0 0 1rem;
     padding: 1em;
     height: 3.5em;
     background-color: #6685FD;
