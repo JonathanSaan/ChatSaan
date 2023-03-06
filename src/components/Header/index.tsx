@@ -6,7 +6,7 @@ import { SignIn } from "../SignIn";
 
 export const Header = () => {
   const [user] = useAuthState(auth);
-  
+
   return (
     <header>
       <Nav>

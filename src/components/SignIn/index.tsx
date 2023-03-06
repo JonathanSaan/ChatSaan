@@ -7,11 +7,11 @@ export const SignIn = () => {
     const provider = new GoogleAuthProvider();
     signInWithRedirect(auth, provider);
   };
-  
+
   return (
     <button onClick={googleSignIn}>
       <span>
-        <AiOutlineGoogle size={20} /> 
+        <AiOutlineGoogle size={20} />
       </span>
       Sign in with Google
     </button>

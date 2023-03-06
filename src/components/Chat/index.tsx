@@ -10,7 +10,6 @@ interface Props {
   setMessages: any;
 }
 
-
 export const Chat = ({ messages, setMessages }: Props) => {
   useEffect(() => {
     const q = query(collection(databaseApp, "messages"), orderBy("timestamp"));

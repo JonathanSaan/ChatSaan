@@ -7,10 +7,9 @@ interface Props {
   photoURL: string;
 }
 
-
 export const ChatMessage = ({ text, uid, photoURL }: Props) => {
-  let messageClass: boolean = uid === auth.currentUser?.uid ? false: true;
-  
+  let messageClass: boolean = uid === auth.currentUser?.uid ? false : true;
+
   return (
     <>
       {messageClass ? (

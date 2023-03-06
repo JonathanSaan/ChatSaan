@@ -9,7 +9,7 @@ export const SignOut = () => {
   return (
     <button onClick={() => auth.signOut()}>
       <span>
-        <FaSignOutAlt size={15} /> 
+        <FaSignOutAlt size={15} />
       </span>
       Sign out
     </button>

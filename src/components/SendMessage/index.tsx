@@ -8,12 +8,12 @@ import { auth, databaseApp } from "../../config/firebase";
 export const SendMessage = () => {
   let [input, setInput] = useState<string>("");
   const [user] = useAuthState(auth);
-  
-  const sendMessage = async (e: { preventDefault: () => void; }) => {
+
+  const sendMessage = async (e: { preventDefault: () => void }) => {
     e.preventDefault();
     if (input === "") {
       return null;
-    };
+    }
     const { uid, displayName, photoURL }: any = auth.currentUser;
     setInput("");
     await addDoc(collection(databaseApp, "messages"), {
@@ -21,7 +21,7 @@ export const SendMessage = () => {
       name: displayName,
       uid,
       photoURL,
-      timestamp: serverTimestamp()
+      timestamp: serverTimestamp(),
     });
   };
 
@@ -35,10 +35,7 @@ export const SendMessage = () => {
         placeholder="Message"
         disabled={!user}
       />
-      <button 
-        type="submit"
-        disabled={!user}
-      >
+      <button type="submit" disabled={!user}>
         <FiSend size={20} />
       </button>
     </Send>

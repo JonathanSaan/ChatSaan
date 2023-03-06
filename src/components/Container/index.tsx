@@ -9,7 +9,7 @@ import { auth } from "../../config/firebase";
 export const Container = () => {
   const [messages, setMessages] = useState<any>([]);
   const [user, loading] = useAuthState(auth);
-  
+
   return (
     <>
       {loading ? (
@@ -18,7 +18,7 @@ export const Container = () => {
         <>
           <Header />
           <Home>
-            <Chat messages={messages} setMessages={setMessages}/>
+            <Chat messages={messages} setMessages={setMessages} />
           </Home>
         </>
       )}
