@@ -1,12 +1,12 @@
 import { AiOutlineGoogle } from "react-icons/ai";
-import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import { GoogleAuthProvider, signInWithRedirect } from "firebase/auth";
 import { auth } from "../../config/firebase";
 
 export const SignIn = () => {
   const provider = new GoogleAuthProvider();
 
   const googleSignIn = async () => {
-    await signInWithPopup(auth, provider);
+    await signInWithRedirect(auth, provider);
   };
 
   return (
