@@ -4,13 +4,13 @@ import ScrollableFeed from "react-scrollable-feed";
 import { ChatMessage } from "../ChatMessage";
 import { SendMessage } from "../SendMessage";
 import { databaseApp } from "../../config/firebase";
-
 interface Props {
+  user: any;
   messages: any;
   setMessages: any;
 }
 
-export const Chat = ({ messages, setMessages }: Props) => {
+export const Chat = ({ messages, setMessages, user }: Props) => {
   useEffect(() => {
     const q = query(collection(databaseApp, "messages"), orderBy("timestamp"));
     const unsubscribe = onSnapshot(q, (querySnapshot) => {
@@ -32,7 +32,7 @@ export const Chat = ({ messages, setMessages }: Props) => {
           ))}
         </ScrollableFeed>
       </main>
-      <SendMessage />
+      {user ? <SendMessage /> : null }
     </>
   );
 };

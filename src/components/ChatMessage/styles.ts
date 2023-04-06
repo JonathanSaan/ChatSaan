@@ -47,7 +47,7 @@ export const UserPerson = styled.div`
 
 export const UserChat = styled.div`
   margin: 0 0 0 auto;
-  padding: 1em;
+  padding: 3em;
   max-height: 10em;
   height: auto;
   min-width: 10vw;

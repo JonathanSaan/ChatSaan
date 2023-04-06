@@ -38,7 +38,10 @@ export const Send = styled.form`
   }
   
   button:active {
+    transition: 300ms;
     transform: scale(0.98);
+  }
+  button:hover {
     filter: Brightness(0.8);
   }
   

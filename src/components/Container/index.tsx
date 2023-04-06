@@ -18,7 +18,7 @@ export const Container = () => {
         <>
           <Header />
           <Home>
-            <Chat messages={messages} setMessages={setMessages} />
+            <Chat messages={messages} setMessages={setMessages} user={user} />
           </Home>
         </>
       )}
