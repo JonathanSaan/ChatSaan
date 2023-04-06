@@ -5,9 +5,9 @@ import { ChatMessage } from "../ChatMessage";
 import { SendMessage } from "../SendMessage";
 import { databaseApp } from "../../config/firebase";
 interface Props {
-  user: any;
   messages: any;
   setMessages: any;
+  user: any;
 }
 
 export const Chat = ({ messages, setMessages, user }: Props) => {
