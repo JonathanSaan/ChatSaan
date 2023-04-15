@@ -1,16 +1,16 @@
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import { query, collection, orderBy, onSnapshot } from "firebase/firestore";
 import ScrollableFeed from "react-scrollable-feed";
 import { ChatMessage } from "../ChatMessage";
 import { SendMessage } from "../SendMessage";
 import { databaseApp } from "../../config/firebase";
 interface Props {
-  messages: any;
-  setMessages: any;
   user: any;
 }
 
-export const Chat = ({ messages, setMessages, user }: Props) => {
+export const Chat = ({ user }: Props) => {
+  const [messages, setMessages] = useState<any>([]);
+
   useEffect(() => {
     const q = query(collection(databaseApp, "messages"), orderBy("timestamp"));
     const unsubscribe = onSnapshot(q, (querySnapshot) => {

@@ -1,5 +1,5 @@
 import GlobalStyle from "./styles/global";
-import { Container } from "./components/Container";
+import { Container } from "./pages/Container";
 
 export const App = () => {
   return (

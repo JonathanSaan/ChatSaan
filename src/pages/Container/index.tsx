@@ -1,13 +1,11 @@
-import { useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
-import { Loading } from "../Loading";
-import { Header } from "../Header";
+import { Loading } from "../../components/Loading";
+import { Header } from "../../components/Header";
 import { Home } from "./styles";
-import { Chat } from "../Chat";
+import { Chat } from "../../components/Chat";
 import { auth } from "../../config/firebase";
 
 export const Container = () => {
-  const [messages, setMessages] = useState<any>([]);
   const [user, loading] = useAuthState(auth);
 
   return (
@@ -18,7 +16,7 @@ export const Container = () => {
         <>
           <Header />
           <Home>
-            <Chat messages={messages} setMessages={setMessages} user={user} />
+            <Chat user={user} />
           </Home>
         </>
       )}
