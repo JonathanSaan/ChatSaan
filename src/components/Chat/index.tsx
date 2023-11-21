@@ -1,14 +1,17 @@
 import { useState, useEffect } from "react";
+
+import ChatMessage from "../ChatMessage";
+import SendMessage from "../SendMessage";
+import { databaseApp } from "../../config/firebase";
+
 import { query, collection, orderBy, onSnapshot } from "firebase/firestore";
 import ScrollableFeed from "react-scrollable-feed";
-import { ChatMessage } from "../ChatMessage";
-import { SendMessage } from "../SendMessage";
-import { databaseApp } from "../../config/firebase";
+
 interface Props {
   user: any;
 }
 
-export const Chat = ({ user }: Props) => {
+const Chat = ({ user }: Props) => {
   const [messages, setMessages] = useState<any>([]);
 
   useEffect(() => {
@@ -36,3 +39,5 @@ export const Chat = ({ user }: Props) => {
     </>
   );
 };
+
+export default Chat;

@@ -2,9 +2,10 @@ import { AiOutlineGoogle } from "react-icons/ai";
 import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import { auth } from "../../config/firebase";
 
-export const SignIn = () => {
+const SignIn = () => {
+  const provider = new GoogleAuthProvider();
+  
   const googleSignIn = () => {
-    const provider = new GoogleAuthProvider();
     signInWithPopup(auth, provider);
   };
 
@@ -17,3 +18,5 @@ export const SignIn = () => {
     </button>
   );
 };
+
+export default SignIn;

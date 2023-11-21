@@ -1,11 +1,7 @@
 import { FaSignOutAlt } from "react-icons/fa";
 import { auth } from "../../config/firebase";
 
-export const SignOut = () => {
-  const signOut = () => {
-    return auth;
-  };
-
+const SignOut = () => {
   return (
     <button onClick={() => auth.signOut()}>
       <span>
@@ -15,3 +11,5 @@ export const SignOut = () => {
     </button>
   );
 };
+
+export default SignOut;

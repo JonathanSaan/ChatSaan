@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { FiSend } from "react-icons/fi";
-import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import { useAuthState } from "react-firebase-hooks/auth";
-import { Send } from "./styles";
+import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import { auth, databaseApp } from "../../config/firebase";
+import { Send } from "./styles";
 
-export const SendMessage = () => {
+const SendMessage = () => {
   let [input, setInput] = useState<string>("");
   const [user] = useAuthState(auth);
 
@@ -41,3 +41,5 @@ export const SendMessage = () => {
     </Send>
   );
 };
+
+export default SendMessage;

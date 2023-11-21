@@ -1,7 +1,7 @@
 import { CircularProgress } from "react-cssfx-loading";
 import { ContainerLoading } from "./styles";
 
-export const Loading = () => {
+const Loading = () => {
   return (
     <ContainerLoading>
       <CircularProgress
@@ -12,3 +12,5 @@ export const Loading = () => {
     </ContainerLoading>
   );
 };
+
+export default Loading;
